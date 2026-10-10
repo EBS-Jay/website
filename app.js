@@ -1,0 +1,11 @@
+const pageRoute = '/' + location.pathname.split('/').filter(Boolean).pop().replace(/\.html$/, '');
+const menu=document.querySelector('.menu-toggle'),nav=document.querySelector('#main-nav');
+menu?.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',open);nav.classList.toggle('open',open);menu.innerHTML=open?'Close':'<span aria-hidden="true">☰</span> Menu';});
+const drop=document.querySelector('.nav-dropdown button');drop?.addEventListener('click',()=>drop.setAttribute('aria-expanded',drop.getAttribute('aria-expanded')!=='true'));
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){drop?.setAttribute('aria-expanded','false');menu?.setAttribute('aria-expanded','false');nav?.classList.remove('open');if(menu)menu.textContent='Menu';}});
+document.addEventListener('click',e=>{if(!e.target.closest('.nav-dropdown'))drop?.setAttribute('aria-expanded','false');});
+const filters=document.querySelectorAll('[data-filter]');filters.forEach(button=>button.addEventListener('click',()=>{const topic=button.dataset.filter;filters.forEach(b=>b.setAttribute('aria-pressed',b===button));let shown=0;document.querySelectorAll('.insight[data-topics]').forEach(card=>{const visible=topic==='All'||card.dataset.topics.split(',').includes(topic);card.hidden=!visible;if(visible)shown++;});document.querySelector('#insights-empty').hidden=shown>0;}));
+
+const intake=document.querySelector('[data-ebs-intake]');
+if(intake){const requested=new URLSearchParams(location.search).get('service');const service=requested||({'/business-coaching':'Business Coaching','/business-roundtable':'Business Roundtable','/ai-solutions':'AI Solutions'}[pageRoute]);if(['Business Coaching','Business Roundtable','AI Solutions','Help me decide'].includes(service)){const url=new URL(intake.src);url.searchParams.set('service',service);intake.src=url.href;document.querySelector('[data-intake-fallback]').href=url.href;}}
+for(const a of document.querySelectorAll('a[href="lets-talk.html"]')){const service={'/business-coaching':'Business Coaching','/business-roundtable':'Business Roundtable','/ai-solutions':'AI Solutions'}[pageRoute];if(service)a.href='lets-talk.html?service='+encodeURIComponent(service);}
