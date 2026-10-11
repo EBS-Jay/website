@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://elevatingbusinesssolutions.com/sitemap.xml

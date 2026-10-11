@@ -1,22 +1,11 @@
-# Elevating Business Solutions website backups
+# Elevating Business Solutions live website
 
-Updated October 10, 2026 with the latest website changes.
+The domain is registered at Namecheap. GitHub Pages publishes this repository from the main branch, root folder, at https://elevatingbusinesssolutions.com/. Keep CNAME and .nojekyll. No additional Namecheap hosting purchase is needed.
 
-## What is included
+Updated October 11, 2026: current social media features and authorized demonstration videos, service metadata, canonical URLs, organization and service structured data, useful FAQs and original owner guides, smaller responsive WebP images, sitemap, and robots.txt. Illustrative examples are explicitly labeled and do not claim client results.
 
-- Social Media page with Silver ($497/month), Gold ($597/month), and Platinum ($997/month) coaching packages, voice setup details, technical support channels, and the new hero image.
-- Homepage Explore buttons linking to their individual service pages.
-- About page philosophy icons and removal of the redundant About link.
-- Roundtable selective membership messaging, Apply for Membership buttons, and application review process.
+Clean URLs use page-name/index.html. Older HTML links and /contact and /how-we-help use browser redirects; GitHub Pages does not support Apache .htaccess or native custom 301 rules.
 
-## View the saved website
+The editable project is maintained separately in the private elevating-business-solutions-website backup repository. This repository contains public website files only. Fillout forms, Zapier, HoneyBook, and automatic email settings are managed separately. External videos and forms require internet access.
 
-Download **EBS-Saved-Website.zip** and extract the entire ZIP. Open **Saved EBS Website/index.html** in Chrome. Keep the images, styles, scripts, and other pages together in that folder. Embedded Fillout forms and online fonts need internet access.
-
-## Edit the website
-
-Download **EBS-Editable-Website.zip** and extract the entire ZIP. Main page content is in **specification.mjs**, Social Media content is in **social-media-page.mjs**, shared layout is in **site.mjs**, and styles and browser scripts are in **dist/client/**. Keep dist/client: it contains the source images and styles. The other change scripts are historical utilities, not commands to rerun when opening the project.
-
-With Node.js installed, open a terminal in the **Editable EBS Website** folder and run **node build.mjs**, then **node preview.mjs**. Open http://127.0.0.1:4173/.
-
-These ZIP files are saved snapshots. GitHub does not automatically update them after local edits, and storing the ZIPs here does not publish the website. Fillout, Zapier, HoneyBook, and email automation settings are managed separately and are not recreated by extracting these files.
+After publishing, inspect the public site, videos, contact and roundtable forms; submit sitemap.xml in Google Search Console and connect actual analytics. Confirm service geography and genuine client evidence before adding those claims.
