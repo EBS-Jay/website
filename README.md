@@ -8,4 +8,4 @@ Clean URLs use page-name/index.html. Older HTML links and /contact and /how-we-h
 
 The editable project is maintained separately in the private elevating-business-solutions-website backup repository. This repository contains public website files only. Fillout forms, Zapier, HoneyBook, and automatic email settings are managed separately. External videos and forms require internet access.
 
-After publishing, inspect the public site, videos, contact and Owners Boardroom forms; submit sitemap.xml in Google Search Console and connect actual analytics. Confirm service geography and genuine client evidence before adding those claims.
+After publishing, inspect the public site, videos, contact and Owner’s Boardroom forms; submit sitemap.xml in Google Search Console and connect actual analytics. Confirm service geography and genuine client evidence before adding those claims.
