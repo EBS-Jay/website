@@ -75,7 +75,14 @@ h1,h2{font-family:'Libre Caslon Display',Georgia,serif;font-weight:400;letter-sp
 /* Leave room for the complete wordmark inside the header crop. */
 .header-inner .brand{height:84px}
 .header-inner .brand img{top:-78px}
-@media(max-width:650px){
-  .header-inner .brand{height:76px}
-  .header-inner .brand img{top:-70px}
+@media (max-width: 650px) {
+  .header-inner .brand {
+    width: min(210px, 48vw);
+    height: auto;
+    aspect-ratio: 560 / 216;
+    background: url("/logo-header-mobile.webp") center / contain no-repeat;
+  }
+  .header-inner .brand img {
+    opacity: 0;
+  }
 }
